@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	<field name="emailId">
+	<field-validator type="email" short-circuit="true">
+	<message>Enter valid Email</message>
+	</field-validator>
+	</field>
+	<field name="userId">
+		<field-validator type="requiredstring" 
+			short-circuit="false">
+		<message>User Id can't be blank</message>
+		</field-validator>
+	</field>
+	<field name="password">
+		<field-validator type="requiredstring"
+			short-circuit="false">
+			<message>Password can't be blank</message>
+		</field-validator>
+		<field-validator type="stringlength">
+		<param name="minLength">4</param>
+		<param name="maxLength">10</param>
+		<message>Password length should be between 4 to 10</message>
+		</field-validator>
+	</field>
+	
+</validators>
